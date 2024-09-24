@@ -1,6 +1,6 @@
 import React from 'react'
 
-CustomButton() {
+const CustomButton = () => {
   return (
     <div>CustomButton</div>
   )
