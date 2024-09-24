@@ -1,8 +1,13 @@
-import React from 'react'
+"use client";
+
 import Image from 'next/image';
 import CustomButton from './CustomButton';
 
 const Hero = () => {
+    const handleScroll = () => {
+
+    }
+
   return (
     <div className="hero">
         <div className="flex-1 pt-36 padding-x">
@@ -13,7 +18,11 @@ const Hero = () => {
                 Streamline Your Car rental experience with our Effortless Booking Process
             </p>
 
-            <CustomButton />
+            <CustomButton
+                title="Explore Cars"
+                containerStyles="bg-primary-blue text-white rounded-full mt-10"
+                handleClick={handleScroll}
+            />
         </div>
     </div>
   )
