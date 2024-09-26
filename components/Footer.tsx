@@ -11,7 +11,9 @@ const Footer = () => {
         <p className='text-base text-gray-700'>Carhub @2024 <br />All rights reserved &copy;
         </p>
         </div>
-        <div></div>
+        <div className='footer__links'>
+          
+        </div>
       </div>
       
     </footer>
