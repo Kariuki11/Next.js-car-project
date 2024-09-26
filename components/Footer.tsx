@@ -8,7 +8,10 @@ const Footer = () => {
       <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
         <div className='flex flex-col justify-start items-start gap-6'>
         <Image src="/logo (1).svg" alt="logo" width={118} height={18} className='object-contain' />
+        <p className='text-base text-gray-700'>Carhub @2024 <br />All rights reserved &copy;
+        </p>
         </div>
+        <div></div>
       </div>
       
     </footer>
