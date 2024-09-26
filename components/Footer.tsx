@@ -14,7 +14,17 @@ const Footer = () => {
         </p>
         </div>
         <div className='footer__links'>
-
+          {footerLinks.map((link) => (
+            <div key={link.title}
+            className='footer__links'>
+              <h3 className='font-bold'>{link.title}</h3>
+              {link.links.map((item) => (
+                <Link
+                key={item.title}
+                />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
       
