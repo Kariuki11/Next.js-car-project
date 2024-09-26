@@ -21,7 +21,11 @@ const Footer = () => {
               {link.links.map((item) => (
                 <Link
                 key={item.title}
-                />
+                href={item.url}
+                className="text-gray-500"
+                >
+                  {item.title}
+                </Link>
               ))}
             </div>
           ))}
