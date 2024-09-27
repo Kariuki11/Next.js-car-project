@@ -17,7 +17,7 @@ const SearchManufacturer = ({ manufacturer, setManufacturer}: SearchManufacturer
         item.toLowerCase()
         .replace(/\s+/g, "")
         .includes(query.toLowerCase().replace(/\s+/g, "")
-  ))
+  )))
 
   return (
     <div className="search-manufacturer">
@@ -45,7 +45,9 @@ const SearchManufacturer = ({ manufacturer, setManufacturer}: SearchManufacturer
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options></Combobox.Options>
+            <Combobox.Options>
+              {filteredManufacturers.map}
+            </Combobox.Options>
           </Transition>
         </div>
       </Combobox>
