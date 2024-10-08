@@ -6,7 +6,7 @@ import Image from "next/image";
 export default async function Home() {
   const allCars = await fetchCars();
 
-  const isDataEmpty
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 ||
 
   return (
     <main className="overflow-hidden">
