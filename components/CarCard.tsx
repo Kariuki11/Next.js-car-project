@@ -6,14 +6,12 @@ import { CarProps } from '@/types';
 import CustomButton from './CustomButton';
 import { calculateCarRent } from '@/utils';
 
-
 interface CarCardProps {
     car: CarProps
 }
 
 const CarCard = ({ car }: CarCardProps) => {
     const { city_mpg, year, make, model, transmission, drive } = car;
-
     const carRent = calculateCarRent(city_mpg, year)
 
   return (
@@ -31,7 +29,6 @@ const CarCard = ({ car }: CarCardProps) => {
                     /day
                 </span>
             </p>
-
             <div className="relative w-full h-40 my-3 object-contain">
                 <Image
                     src="/hero.png" 
@@ -39,6 +36,14 @@ const CarCard = ({ car }: CarCardProps) => {
                     layout="fill"
                     objectFit="contain"
                 />
+            </div>
+
+            <div className="relative flex w-full mt2">
+                <div className="flex group-hover:invisible w-full justify-between text-gray">
+                    <div className="flex-col justify-center items-center gap-2">
+                        <Image src=/steering-wheel.svg/>
+                    </div>
+                </div>
             </div>
 
         </div>
