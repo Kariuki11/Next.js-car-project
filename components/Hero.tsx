@@ -28,6 +28,7 @@ const Hero = () => {
                     <Image src="/hero.png" alt="hero" fill className="object-contain" />
                 </div>
                     <div className="hero__image-overlay" />
+                    {/* <div className="hero__image-overlay absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-[0]" /> */}
             </div>
         </div>
     </div>
