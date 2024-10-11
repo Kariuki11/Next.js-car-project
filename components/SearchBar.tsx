@@ -21,9 +21,36 @@ const SearchBar = () => {
   const[manufacturer, setManufacturer] = useState('');
   const[model, setModel] = useState('');
 
-    const handleSearch = () => {
+    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if(manufacturer === '' && model === '') {
+      alert('Please enter a manufacturer and model');
+      return;
+    }
 
     }
+
+    const updateSearchParams = (model: string, manufacturer: string) => {
+      const searchParams = new URLSearchParams(window.location.search);
+
+      if(model) {
+        searchParams.set('model', model)
+      } else {
+        searchParams.delete('model')
+      }
+      
+      if(manufacturer) {
+        searchParams.set('manufacturer', manufacturer)
+      } else {
+        searchParams.delete('manufacturer')
+      }
+
+      const newPath = `${window.location.pathname}?${searchParams.toString()}`;
+      window.history.pushState({}, '', newPath);
+    }
+
+
   return (
     <form className='searchbar' onSubmit=
     {handleSearch}>
