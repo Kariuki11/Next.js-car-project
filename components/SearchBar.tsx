@@ -19,6 +19,7 @@ const SearchButton = ({ otherClasses }: {otherClasses: string })=> (
 
 const SearchBar = () => {
   const[manufacturer, setManufacturer] = useState('');
+  const[model, setModel] = useState('');
 
     const handleSearch = () => {
 
@@ -33,7 +34,29 @@ const SearchBar = () => {
           />  
           <SearchButton otherClasses="sm:hidden" />
         </div>
-        <div className="searchbar__item"></div>
+        <div className="searchbar__item">
+          <Image
+            src="/model-icon.png"
+            width={25}
+            height={25}
+            alt="model icon"
+            className="absolute w-[20px] h-[20px] ml-4"
+          />
+          <input
+            type="text"
+            name='model'
+            placeholder="Model"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            className="searchbar__input"
+          />
+          <SearchButton
+            otherClasses="sm:hidden"
+          />
+          <SearchButton
+            otherClasses="max-sm:hidden"
+          />
+        </div>
     </form>
   )
 }
