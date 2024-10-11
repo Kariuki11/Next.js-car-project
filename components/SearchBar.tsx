@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { SearchManufacturer } from './'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import Image from 'next/image'
 
@@ -20,6 +21,7 @@ const SearchButton = ({ otherClasses }: {otherClasses: string })=> (
 const SearchBar = () => {
   const[manufacturer, setManufacturer] = useState('');
   const[model, setModel] = useState('');
+  const router = useRouter();
 
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -28,7 +30,7 @@ const SearchBar = () => {
       alert('Please enter a manufacturer and model');
       return;
     }
-
+    updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase())
     }
 
     const updateSearchParams = (model: string, manufacturer: string) => {
@@ -39,7 +41,7 @@ const SearchBar = () => {
       } else {
         searchParams.delete('model')
       }
-      
+
       if(manufacturer) {
         searchParams.set('manufacturer', manufacturer)
       } else {
@@ -47,7 +49,8 @@ const SearchBar = () => {
       }
 
       const newPath = `${window.location.pathname}?${searchParams.toString()}`;
-      window.history.pushState({}, '', newPath);
+
+      router.push(newPath)
     }
 
 
