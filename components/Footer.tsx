@@ -38,7 +38,7 @@ const Footer = () => {
 
           <div className='footer__copyright-links'>
             <Link href='/' style={{ marginLeft: '20px'}}className='text-gray-500'>Privacy Policy</Link>
-            <Link href='/' style={{ marginLeft: '20px'}} className='text-gray-500'>Terms of Use</Link>
+            <Link href='/' style={{ marginLeft: '20px'}} className='text-gray-500'>Terms</Link>
           </div>
         </div>
       
