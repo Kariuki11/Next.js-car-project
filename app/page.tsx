@@ -1,16 +1,27 @@
+"useClient";
+
 import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 
 import Image from "next/image";
 
-export default async function Home({ searchParams }) {
+interface HomeProps  {
+  params: {
+    manufacturer: string
+    year: number
+    fuel: string
+    model: string
+    limit: number
+  }
+}
+export default async function Home({ params }: HomeProps) {
   const allCars = await fetchCars({ 
-    manufacturer: searchParams.manufacturer || '',
-    year: searchParams.year || 2022, 
-    fuel: searchParams.fuel || '',
-    model: searchParams.model || '',
-    limit: searchParams.limit || 10,
+    manufacturer: params.manufacturer || '',
+    year: params.year || 2022, 
+    fuel: params.fuel || '',
+    model: params.model || '',
+    limit: params.limit || 10,
    });
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars;
