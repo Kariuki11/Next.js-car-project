@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
         <div className='flex flex-col justify-start items-start gap-4'>
         <Image src="/logo.svg" alt="logo" width={118} height={18} className='object-contain' />
-        <p className='text-base text-gray-700'>Carhub @2024 <br />All rights reserved &copy;
+        <p className='text-base text-gray-700'>Carhub @2025 <br />All rights reserved &copy;
         </p>
         </div>
         {/* <div className='footer__links gap-8'> */}
@@ -34,11 +34,11 @@ const Footer = () => {
         </div>
         </div>
         <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10'>
-          <p>@2024 CarHub. All rights Reserved.</p>
+          <p>@2025 CarHub. All rights Reserved.</p>
 
           <div className='footer__copyright-links'>
             <Link href='/' style={{ marginLeft: '20px'}}className='text-gray-500'>Privacy Policy</Link>
-            <Link href='/' style={{ marginLeft: '20px'}} className='text-gray-500'>Terms</Link>
+            <Link href='/' style={{ marginLeft: '20px'}} className='text-gray-500'>Terms & Conditions</Link>
           </div>
         </div>
       
